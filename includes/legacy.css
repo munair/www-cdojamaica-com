@@ -1,0 +1,66 @@
+/* body start */
+body {
+        color: #FFF;
+        background-color: rgba(084,092,096,0.99);
+        font-size: 15px;
+        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+        text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+/* body end */
+
+/* wrapper start*/
+#wrapper{
+        width:100%;
+        height:100%;
+        position:absolute;
+	z-order:-1;
+	margin: 0;
+	padding: 0;
+	border: 0;
+        background: -webkit-gradient(radial, 50% 25%, 1, 50% 25%, 850, from(rgba(220,230,255,0.3)), to(rgba(215,225,245,0.1)));
+}
+/* wrapper end */
+
+/* separator start*/
+.separator{
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        padding: 9px 5% 9px 5%;
+        margin: 9px 5% 9px 5%;
+        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+        -goog-ms-box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+        -moz-border-radius: 9px;
+        -webkit-border-radius: 9px;
+        -goog-ms-border-radius: 9px;
+        border-radius: 9px;
+        width: 80%;
+        height: 40px;
+	text-align: center;
+}
+/* separator end */
+
+/* info end */
+.info h1{
+        font-size:44px;
+	line-height:46px;
+        letter-spacing:2px;
+        text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+        margin:0;
+        padding:0;
+	text-align:center;
+}
+.info p{
+        font-size:15px;
+        text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	line-height:18px;
+        letter-spacing:0.9px;
+        margin:0;
+        padding:0;
+        text-align:left;
+}
+/* info end */
