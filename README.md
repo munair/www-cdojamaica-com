@@ -1,13 +1,13 @@
-www-quilombola-com
+www-cdojamaica-com
 ===========================
 
-Repository for quilombola.com domain.
+Repository for cdojamaica.com domain.
 
 To clone this repository on a new AWS EC2 instance --
 
 Copy the contents of the 1st script of this README.md, dump a copy into machine-setup.bash just as you log in as ubuntu for the first time,
 and run this on a new EC2 instance running Ubuntu 12.04.2 LTS to configure both the machine and the environment for 
-developing the Quilombola app:
+developing the CDO Jamaica app:
 
 ```
 
@@ -99,7 +99,7 @@ sleep 5
 git merge development
 git push origin staging
 cat ~/.netrc | grep heroku || heroku login && heroku keys:add ~/.ssh/id_rsa.pub
-heroku git:remote -a dev-quilombola-com -r staging-heroku
+heroku git:remote -a dev-cdojamaica-com -r staging-heroku
 git push staging-heroku staging:master
 [ $3 == "noprompting" ] || while true; do
     read -p "shall we push changes to the master GitHub repository and the production instance on Heroku? " yn
@@ -114,12 +114,12 @@ git branch
 sleep 5
 git merge staging
 git push origin master
-heroku git:remote -a www-quilombola-com -r production-heroku
+heroku git:remote -a www-cdojamaica-com -r production-heroku
 git push production-heroku master:master
 git checkout development
 
 
 ```
 
-See also http://www.quilombola.com and [Heroku](https://www.heroku.com) for more details.
+See also http://www.cdojamaica.com and [Heroku](https://www.heroku.com) for more details.
 

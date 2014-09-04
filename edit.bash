@@ -32,7 +32,7 @@ ls $1
 git add --all $1
 git commit -m "$2"
 git remote remove origin
-git remote add origin https://github.com/munair/www-quilombola-com.git
+git remote add origin https://github.com/munair/www-cdojamaica-com.git
 git push origin development
 [ $3 == "noprompting" ] || while true; do
     read -p "shall we push changes to the staging GitHub repository and the staging instance on Heroku? " yn
@@ -50,10 +50,10 @@ git push origin staging
 cat ~/.netrc | grep heroku || heroku login && heroku keys:add ~/.ssh/id_rsa.pub
 git remote remove heroku
 git remote remove staging-heroku
-heroku apps:destroy dev-quilombola-com --confirm dev-quilombola-com
-heroku apps:create dev-quilombola-com
-heroku domains:add dev.quilombola.com --app dev-quilombola-com
-heroku git:remote -a dev-quilombola-com -r staging-heroku
+heroku apps:destroy dev-cdojamaica-com --confirm dev-cdojamaica-com
+heroku apps:create dev-cdojamaica-com
+heroku domains:add dev.cdojamaica.com --app dev-cdojamaica-com
+heroku git:remote -a dev-cdojamaica-com -r staging-heroku
 git push staging-heroku staging:master
 [ $3 == "noprompting" ] || while true; do
     read -p "shall we push changes to the master GitHub repository and the production instance on Heroku? " yn
@@ -68,9 +68,9 @@ git branch
 git merge staging
 git push origin master
 git remote remove production-heroku
-heroku apps:destroy www-quilombola-com --confirm www-quilombola-com
-heroku apps:create www-quilombola-com
-heroku domains:add www.quilombola.com --app www-quilombola-com
-heroku git:remote -a www-quilombola-com -r production-heroku
+heroku apps:destroy www-cdojamaica-com --confirm www-cdojamaica-com
+heroku apps:create www-cdojamaica-com
+heroku domains:add www.cdojamaica.com --app www-cdojamaica-com
+heroku git:remote -a www-cdojamaica-com -r production-heroku
 git push production-heroku master:master
 git checkout development

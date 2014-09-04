@@ -13,14 +13,6 @@ app.use("/fonts", express.static(__dirname + '/fonts'));
 app.use("/sounds", express.static(__dirname + '/sounds'));
 
 app.get('/', function(request, response) { var htmlBuffer = fs.readFileSync('index.html', 'utf-8'); response.send(htmlBuffer); });
-app.get('/services', function(request, response) { var htmlBuffer = fs.readFileSync('index.html', 'utf-8'); response.send(htmlBuffer); });
-app.get('/proprietor', function(request, response) { var htmlBuffer = fs.readFileSync('index.html', 'utf-8'); response.send(htmlBuffer); });
-app.get('/contact', function(request, response) { var htmlBuffer = fs.readFileSync('index.html', 'utf-8'); response.send(htmlBuffer); });
-app.get('/inc_services.html', function(request, response) { var htmlBuffer = fs.readFileSync('inc_services.html', 'utf-8'); response.send(htmlBuffer); });
-app.get('/inc_proprietor.html', function(request, response) { var htmlBuffer = fs.readFileSync('inc_proprietor.html', 'utf-8'); response.send(htmlBuffer); });
-app.get('/inc_contact.html', function(request, response) { var htmlBuffer = fs.readFileSync('inc_contact.html', 'utf-8'); response.send(htmlBuffer); });
-app.get('/inc_email.html', function(request, response) { var htmlBuffer = fs.readFileSync('inc_email.html', 'utf-8'); response.send(htmlBuffer); });
-app.get('/inc_formconfirmation.html', function(request, response) { var htmlBuffer = fs.readFileSync('inc_formconfirmation.html', 'utf-8'); response.send(htmlBuffer); });
 
 app.post('/inc_email.html', function(request, response) {
   var name = request.body.name;
@@ -36,12 +28,12 @@ app.post('/inc_email.html', function(request, response) {
           + '\n';
 
   postmark.send({
-    "From" : "munair@quilombola.com",
-    "To" : "munair@quilombola.com",
-    "Subject" : "Contact from www.quilombola.com",
-    "From" : "munair@quilombola.com",
-    "To" : "munair@quilombola.com",
-    "Subject" : "Contact from www.quilombola.com",
+    "From" : "zumbi@cdojamaica.com",
+    "To" : "zumbi@cdojamaica.com",
+    "Subject" : "Contact from www.cdojamaica.com",
+    "From" : "zumbi@cdojamaica.com",
+    "To" : "zumbi@cdojamaica.com",
+    "Subject" : "Contact from www.cdojamaica.com",
     "Tag" : "Inquiry",
     "TextBody" : out
   }, function(error, success) {
