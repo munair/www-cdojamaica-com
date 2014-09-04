@@ -47,7 +47,7 @@ body						{ margin:20px 0 0 0; padding:0; background-color:#000; font:12px "Cent
 
 h1, h2, h3, h4, h5, h6 				{ margin:0; padding:0; font-family:Helvetica, Arial, sans-serif; font-weight:normal; } 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a 		{ font-weight: inherit; }
-h1 						{ margin:0 0 10px 0; padding:0; font-size:28px; line-height:32px; color:#333; }
+h1 						{ margin:0 0 10px 0; padding:0; font-size:28px; line-height:32px; color:#ffcc00; }
 h2						{ margin:0 0 10px 0; padding:0; font-size:22px; line-height:26px; color:#333; }
 h3 						{ margin:0 0 10px 0; padding:0; font-size:16px; line-height:20px; color:#333; }
 h4 						{ margin:0 0 10px 0; padding:0; font-size:16px; line-height:20px; color:#333; font-weight:bold; }
