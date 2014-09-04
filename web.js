@@ -11,6 +11,7 @@ app.use("/css", express.static(__dirname + '/css'));
 app.use("/images", express.static(__dirname + '/images'));
 app.use("/fonts", express.static(__dirname + '/fonts'));
 app.use("/sounds", express.static(__dirname + '/sounds'));
+app.use("/includes", express.static(__dirname + '/includes'));
 
 app.get('/', function(request, response) { var htmlBuffer = fs.readFileSync('index.html', 'utf-8'); response.send(htmlBuffer); });
 
